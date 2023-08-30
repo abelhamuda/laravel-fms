@@ -24,8 +24,7 @@ $this->router->post('register', 'Auth\RegisterController@register')->name('auth.
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/home', 'HomeController@index');
 
-    Route::resource('subscriptions', 'Admin\SubscriptionsController');
-    Route::resource('payments', 'Admin\PaymentsController');
+
     Route::resource('roles', 'Admin\RolesController');
     Route::post('roles_mass_destroy', ['uses' => 'Admin\RolesController@massDestroy', 'as' => 'roles.mass_destroy']);
     Route::resource('users', 'Admin\UsersController');
