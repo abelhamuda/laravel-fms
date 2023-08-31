@@ -1,11 +1,48 @@
 <?php
 
 return [
-		'user-management' => [		'title' => 'User management',		'fields' => [		],	],
-		'roles' => [		'title' => 'Roles',		'fields' => [			'title' => 'Title',		],	],
-		'users' => [		'title' => 'Users',		'fields' => [			'name' => 'Name',			'email' => 'Email',			'password' => 'Password',			'role' => 'Role',			'remember-token' => 'Remember token',		],	],
-		'folders' => [		'title' => 'Folders',		'fields' => [			'name' => 'Name',			'created-by' => 'Created by',		],	],
-		'files' => [		'title' => 'Files',		'fields' => [			'uuid' => 'Uuid',			'folder' => 'Folder id',			'created-by' => 'Created by',			'filename' => 'Filename',		],	],
+	
+	'user-management' => [
+		'title' => 'User management',
+		'fields' => [
+		],
+	],
+	
+	'roles' => [
+		'title' => 'Roles',
+		'fields' => [
+			'title' => 'Title',
+		],
+	],
+	
+	'users' => [
+		'title' => 'Users',
+		'fields' => [
+			'name' => 'Name',
+			'email' => 'Email',
+			'password' => 'Password',
+			'role' => 'Role',
+			'remember-token' => 'Remember token',
+		],
+	],
+	
+	'folders' => [
+		'title' => 'Folders',
+		'fields' => [
+			'name' => 'Name',
+			'created-by' => 'Created by',
+		],
+	],
+	
+	'files' => [
+		'title' => 'Files',
+		'fields' => [
+			'uuid' => 'Uuid',
+			'folder' => 'Folder id',
+			'created-by' => 'Created by',
+			'filename' => 'Filename',
+		],
+	],
 	'qa_create' => 'Létrehozás',
 	'qa_save' => 'Mentés',
 	'qa_edit' => 'Szerkesztés',
@@ -241,5 +278,5 @@ return [
 	'qa_select_users_placeholder' => 'Válasszon ki egy felhasználót',
 	'qa_when_crud' => 'Amikor CRUD',
 	'qa_action_model' => 'Tevékenység model',
-	'quickadmin_title' => 'File Storage',
+	'quickadmin_title' => 'KEBIJAKAN',
 ];
