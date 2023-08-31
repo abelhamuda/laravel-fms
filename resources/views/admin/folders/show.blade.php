@@ -8,6 +8,7 @@
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success disabled">Add file to this Folder</a>
         @else
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success">Add New File to this Folder</a>
+            <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Folder</a>
         @endif
     </p>
     <div class="panel panel-default">
@@ -26,7 +27,7 @@
                             <th style="text-align:center;"><input type="checkbox" id="select-all"/></th>@endif
                     @endcan
 
-                    <th>Filename</th>
+                    <th>Name</th>
                     <th>Folder</th>
                     @if( request('show_deleted') == 1 )
 
