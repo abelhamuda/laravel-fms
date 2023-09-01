@@ -67,16 +67,6 @@
             </li>
             @endcan
 
-            {{-- @can('plan_access')
-            <li class="{{ $request->segment(2) == 'subscriptions' ? 'active' : '' }}">
-                <a href="{{ route('admin.subscriptions.index') }}">
-                    <i class="fa fa-credit-card"></i>
-                    <span class="title">My Plan</span>
-                </a>
-            </li>
-            @endcan --}}
-
-
             <li class="{{ $request->segment(1) == 'change_password' ? 'active' : '' }}">
                 <a href="{{ route('auth.change_password') }}">
                     <i class="fa fa-key"></i>
