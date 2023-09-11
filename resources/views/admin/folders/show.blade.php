@@ -86,9 +86,6 @@
                                     @endcan
                                 </td>
                             @endif
-
-                            
-
                         </tr>
                     @endforeach
                 @else
