@@ -5,15 +5,16 @@
     <p>
 
         @if (Auth::getUser()->role_id == 2 && $userFilesCount > 5)
-            <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success disabled">Add file to this Folder</a>
-            <a href="{{url('/admin/subscriptions')}}" class="btn btn-primary">Upgrade plan to Premium for $9.99/month</a>
+            <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success disabled">Add file to this Category</a>
         @else
-            <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success">Add New File to this Folder</a>
+            <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success">Add New File to this Category</a>
+            <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Category</a>
+
         @endif
     </p>
     <div class="panel panel-default">
         <div class="panel-heading">
-            Files
+            File & Folder
         </div>
         {{--<div class="tab-content">--}}
 

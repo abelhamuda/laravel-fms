@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
+    <h3 class="page-title">Categories</h3>
     @can('folder_create')
         <p>
             <a href="{{ route('admin.folders.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
@@ -122,10 +122,10 @@
 //            table.button( '.dt-button' ).remove();
         })
     </script>
-    <script>
+    
         @can('folder_delete')
                 @if ( request('show_deleted') != 1 ) window.route_mass_crud_entries_destroy = '{{ route('admin.folders.mass_destroy') }}'; @endif
         @endcan
 
-    </script>
+    
 @endsection
