@@ -3,15 +3,14 @@
 @section('content')
     <h3 class="page-title">{{$folder->name}}</h3>
     <p>
-
         @if (Auth::getUser()->role_id == 2 && $userFilesCount > 5)
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success disabled">Add file to this Category</a>
         @else
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success">Add New File to this Category</a>
             <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Category</a>
-
         @endif
     </p>
+
     <div class="panel panel-default">
         <div class="panel-heading">
             File & Folder
@@ -87,6 +86,9 @@
                                     @endcan
                                 </td>
                             @endif
+
+                            
+
                         </tr>
                     @endforeach
                 @else

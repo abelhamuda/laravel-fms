@@ -123,9 +123,10 @@
         })
     </script>
     
+    <p>
         @can('folder_delete')
                 @if ( request('show_deleted') != 1 ) window.route_mass_crud_entries_destroy = '{{ route('admin.folders.mass_destroy') }}'; @endif
         @endcan
-    
+    </p>
     
 @endsection
