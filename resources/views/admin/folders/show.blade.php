@@ -6,9 +6,9 @@
 
         @if (Auth::getUser()->role_id == 2 && $userFilesCount > 5)
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success disabled">Add file to this Folder</a>
+            <a href="{{url('/admin/subscriptions')}}" class="btn btn-primary">Upgrade plan to Premium for $9.99/month</a>
         @else
             <a href="{{url('admin/files/create?folder_id=' . $folder->id)}}" class="btn btn-success">Add New File to this Folder</a>
-            <a href="{{ route('admin.folders.create') }}" class="btn btn-success">Add New Folder</a>
         @endif
     </p>
     <div class="panel panel-default">
@@ -27,7 +27,7 @@
                             <th style="text-align:center;"><input type="checkbox" id="select-all"/></th>@endif
                     @endcan
 
-                    <th>Name</th>
+                    <th>Filename</th>
                     <th>Folder</th>
                     @if( request('show_deleted') == 1 )
 
@@ -47,7 +47,7 @@
                             @endcan
                             <td field-key='filename'> @foreach($file->getMedia('filename') as $media)
                                     <p class="form-group">
-                                        <a href="{{url('/admin' . $file->uuid . '/download')}}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
+                                        <a href="{{url('/admin/' . $file->uuid . '/download')}}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
                                     </p>
                                 @endforeach</td>
                             <td field-key='folder'>{{ $file->folder->name or '' }}</td>
@@ -74,7 +74,7 @@
                                 </td>
                             @else
                                 <td>
-                                    <a href="{{url('/admin' . $file->uuid . '/download')}}" class="btn btn-xs btn-success">Download</a>
+                                    <a href="{{url('/admin/' . $file->uuid . '/download')}}" class="btn btn-xs btn-success">Download</a>
                                     @can('file_delete')
                                         {!! Form::open(array(
                                                                                 'style' => 'display: inline-block;',
