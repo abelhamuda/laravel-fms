@@ -67,7 +67,7 @@
                             @endcan
                             <td field-key='filename'> @foreach($file->getMedia('filename') as $media)
                                     <p class="form-group">
-                                        <a href="{{url('/admin/' . $file->uuid . '/download')}}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
+                                        <a href="{{url('/admin' . $file->uuid . '/download')}}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
                                     </p>
                                 @endforeach</td>
                             <td field-key='folder'>{{ $file->folder->name or '' }}</td>
@@ -107,7 +107,7 @@
 
                             @else
                                 <td>
-                                    <a href="{{url('/admin/' . $file->uuid . '/download')}}" class="btn btn-xs btn-success">Download</a>
+                                    <a href="{{url('/admin' . $file->uuid . '/download')}}" class="btn btn-xs btn-success">Download</a>
                                     @can('file_delete')
                                         {!! Form::open(array(
                                                                                 'style' => 'display: inline-block;',
