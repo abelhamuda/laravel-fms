@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('quickadmin.folders.title')</h3>
+    <h3 class="page-title">Category</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['admin.folders.store']]) !!}
 
     <div class="panel panel-default">
