@@ -63,6 +63,6 @@ class SubscriptionsController extends Controller
 
         }
 
-        return redirect()->route('admin.subscriptions.index');
+        return redirect()->route('  ');
     }
 }
