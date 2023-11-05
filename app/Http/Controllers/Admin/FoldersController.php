@@ -191,7 +191,7 @@ class FoldersController extends Controller
             return abort(401);
         }
         $folder = Folder::onlyTrashed()->findOrFail($id);
-        $folder->restore();
+        $folder->restore(); 
 
         return redirect()->route('admin.folders.index');
     }

@@ -69,7 +69,7 @@
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit"
                                     class="btn btn-primary"
-                                    style="margin-right: 15px;">
+                                     style="margin-right: 15px;">
                                 @lang('quickadmin.qa_login')
                             </button>
                         </div>
